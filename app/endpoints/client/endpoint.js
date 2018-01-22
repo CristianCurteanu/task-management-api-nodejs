@@ -15,7 +15,7 @@ module.exports = async(fastify, opts, next) => {
 
         client.save((err, client) => {
             if (err) {
-                response.code(500)
+                response.code(400)
                 return response.send({ messages: err.errors })
             } else {
                 response.code(201)
