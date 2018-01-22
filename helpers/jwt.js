@@ -21,7 +21,7 @@ const TokenDecode = (function() {
 })();
 
 module.exports.encode = function(value, secret) {
-    return JWT.sign({ data: value }, secret, { expiresIn: 1800 });
+    return JWT.sign({ data: JSON.stringify(value) }, secret, { expiresIn: 1800 });
 }
 
 module.exports.decode = function(token, secret) {
