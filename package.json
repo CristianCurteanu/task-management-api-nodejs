@@ -4,14 +4,14 @@
     "description": "Project task management application REST API",
     "main": "main.js",
     "scripts": {
-        "test": "mocha --timeout 999999 --colors --recursive ./",
+        "test": "mocha --timeout 999999 -u tdd --exit --colors --recursive ./app/",
         "start": "node main.js"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "bcrypt": "^1.0.3",
-        "fastify": "^0.35.0",
+        "fastify": "^0.40.0",
         "jsonwebtoken": "^8.1.0",
         "mongoose": "^4.13.9",
         "uuid": "^3.2.1"

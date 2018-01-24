@@ -25,16 +25,16 @@ describe('Client resource', () => {
             request.end((err, response) => {
                 response.should.have.json
                 response.should.have.status(201);
+                done();
             });
-            done();
         })
 
         it('should return 400 if email is not set', (done) => {
             var request = chai.request(URL).post('/client').send({ email: null })
             request.end((err, response) => {
                 response.should.have.status(400);
+                done();
             });
-            done();
         })
     });
 });
